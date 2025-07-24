@@ -17,7 +17,7 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def train():
-    loader = TextLoader("custom_text.txt")
+    loader = TextLoader("../custom_text.txt")
     documents = loader.load()
     splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     docs = splitter.split_documents(documents)
